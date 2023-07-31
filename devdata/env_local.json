@@ -1,0 +1,6 @@
+{
+  "DOP_RPA_ASSETS_MANAGER": "DOP.RPA.Asset.FileAssets",
+  "DOP_RPA_ASSETS_FILE": "devdata\\assets.json",
+  "DOP_RPA_PROCESS_ARGUMENTS_MANAGER": "DOP.RPA.ProcessArgument.FileProcessArguments",
+  "DOP_RPA_PROCESS_ARGUMENTS_FILE": "devdata\\args.json"
+}

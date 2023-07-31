@@ -1,0 +1,68 @@
+tasks:
+  Run all tasks:
+    shell: python -m robot --report NONE -d output --logtitle "Task log" tasks.robot
+
+arguments:
+  input:
+    - name: invoiceFile
+      type: File
+      required: True
+      defaultValue:
+      description: Invoice file for collect
+    - name: lookupCode
+      type: String
+      required: False
+      defaultValue:
+      description: LookupCode for download invoice form Portal
+    - name: ocrType
+      type: String
+      required: False
+      defaultValue:
+      description: Supported type read image (AI or DOP)
+  output:
+    - name: result
+      type: Boolean
+      required: True
+      defaultValue:
+      description: Robot Perform Result
+    - name: pdfInvoiceFile
+      type: File
+      required: True
+      defaultValue:
+      description: Downloaded Invoice PDF File
+    - name: xmlInvoiceFile
+      type: File
+      required: True
+      defaultValue:
+      description: Downloaded Invoice XML File
+    - name: sellerTaxCode
+      type: String
+      required: True
+      defaultValue:
+      description: Seller TaxCode
+    - name: invoiceTemplate
+      type: String
+      required: True
+      defaultValue:
+      description: Invoice Template Code
+    - name: invoiceSeries
+      type: String
+      required: True
+      defaultValue:
+      description: Invoice Series
+    - name: invoiceNumber
+      type: String
+      required: True
+      defaultValue:
+      description: Invoice Number
+
+condaConfigFile: conda.yaml
+ignoreFiles:
+  - .gitignore
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - keywords
+  - libraries
+  - variables
